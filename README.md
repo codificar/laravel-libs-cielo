@@ -1,6 +1,6 @@
-# API-3.0-PHP
+# codificar/cielo
 
-SDK API-3.0 PHP
+Alteração da API 3.0 da cielo para deixar compatível com os projetos da Codificar.
 
 ## Principais recursos
 
@@ -27,11 +27,33 @@ Por envolver a interface de usuário da aplicação, o SDK funciona apenas como 
 
 Se já possui um arquivo `composer.json`, basta adicionar a seguinte dependência ao seu projeto:
 
+
+```json
+"repositories": [
+    {
+        "type": "vcs",
+        "url": "https://libs:ofImhksJ@git.codificar.com.br/laravel-libs/cielo.git"
+    }
+]
+```
+
 ```json
 "require": {
-    "developercielo/api-3.0-php": "^1.0"
+    "codificar/cielo": "0.1.0"
 }
 ```
+
+
+
+```json
+"autoload": {
+    "psr-4": {
+        "Cielo\\": "vendor/codificar/cielo/src",
+    },
+}
+```
+
+
 
 Com a dependência adicionada ao `composer.json`, basta executar:
 
@@ -39,11 +61,6 @@ Com a dependência adicionada ao `composer.json`, basta executar:
 composer install
 ```
 
-Alternativamente, você pode executar diretamente em seu terminal:
-
-```
-composer require "developercielo/api-3.0-php"
-```
 
 ## Produtos e Bandeiras suportadas e suas constantes
 
